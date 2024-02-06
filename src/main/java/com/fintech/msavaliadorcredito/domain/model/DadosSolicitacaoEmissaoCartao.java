@@ -5,9 +5,11 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class CartaoCliente {
+public class DadosSolicitacaoEmissaoCartao {
 
-    private String nome;
-    private String bandeira;
+    private Long idCartao;
+    private String cpf;
+    private String endereco;
     private BigDecimal limiteLiberado;
+
 }
