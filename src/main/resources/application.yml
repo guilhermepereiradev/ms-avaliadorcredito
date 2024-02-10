@@ -2,7 +2,7 @@ spring:
   application:
     name: ms-avaliadorcredito
   rabbitmq:
-    host: localhost
+    host: ${RABBITMQ_SERVER}
     port: 5672
     stream:
       username: guest
@@ -14,7 +14,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://cursoms-eureka-user:karscsosemr-erue-uu@localhost:8761/eureka
+      defaultZone: http://cursoms-eureka-user:karscsosemr-erue-uu@${EUREKA_SERVER}:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
